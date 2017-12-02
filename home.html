@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <title>01. Getting Started | Kali Linux</title>
+
+<link rel="stylesheet" href="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.9.1" type="text/css" media="all" />
+
+<!-- All in One SEO Pack 2.3.16 by Michael Torbert of Semper Fi Web Design[246,291] -->
+<link rel="canonical" href="https://docs.kali.org/category/introduction" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Kali Linux &raquo; Feed" href="https://docs.kali.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="Kali Linux &raquo; Comments Feed" href="https://docs.kali.org/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Kali Linux &raquo; 01. Getting Started Category Feed" href="https://docs.kali.org/category/introduction/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/docs.kali.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.1"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='theme-style-css'  href='https://docs.kali.org/wp-content/themes/knowhow-childtheme/style.css?ver=4.8.1' type='text/css' media='all' />
+<style id='theme-style-inline-css' type='text/css'>
+ 
+				/* Links */
+				a, 
+				a:visited { color:#a03717; }
+				a:hover, 
+				.widget a:hover,
+				#primary-nav ul a:hover,
+				#footer-nav a:hover,
+				#breadcrumbs a:hover { color:#a03717; }
+				
+				/* Theme Color */
+				#commentform #submit, 
+				.st_faq h2.active .action, 
+				.widget_categories ul span, 
+				.pagination .current, 
+				.tags a, 
+				.page-links span,
+				#comments .comment-meta .author-badge,
+				input[type="reset"],
+				input[type="submit"],
+				input[type="button"] { background: #32638e; }
+				#live-search #searchsubmit, input[type="submit"] { background-color: #32638e; }
+				.tags a:before { border-color: transparent #32638e transparent transparent; }
+				#primary-nav { top: -10px; }
+
+				#site-header #logo h1, #site-header #logo h2 {
+text-transform:uppercase;
+}
+@media only screen and (max-width: 720px) {
+	#site-header #logo a img {
+		display:table !important;
+		margin:0 auto !important;
+		width:100px;
+		height:80px;
+		clear:both;
+	}
+	#site-header #logo h1, #site-header #logo h2 {
+	display:block;
+	text-align:center;
+	clear:both;
+	left: 0 !important;
+	top: 0 !important;
+	position:relative !important;
+	padding:10px;
+	}
+	#site-header #logo h1 a {
+	font-size:28px !important;
+	letter-spacing:0.125em;
+	}
+	#site-header #logo h2 a {
+	font-size:22px !important;
+	letter-spacing:0.125em;
+	}
+	#site-header , #site-header #logo {
+	display:table;
+	width: 100% !important;
+	height: auto !important;
+	margin:0 auto !important;
+	padding:20px !important;
+
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#site-header #logo a img {
+		display:table !important;
+		margin:0 auto !important;
+		width:100px;
+		height:80px;
+		clear:both;
+	}
+	#site-header #logo h1, #site-header #logo h2 {
+	display:block;
+	text-align:center;
+	clear:both;
+	left: 0 !important;
+	top: 0 !important;
+	position:relative !important;
+	padding:10px;
+	}
+	#site-header #logo h1 a {
+	font-size:28px !important;
+	letter-spacing:0.125em;
+	}
+	#site-header #logo h2 a {
+	font-size:22px !important;
+	letter-spacing:0.125em;
+	}	
+	#site-header , #site-header #logo {
+	display:table;
+	width: 100% !important;
+	height: auto !important;
+	margin:0 auto !important;
+	padding:20px !important;
+
+	}
+}
+
+
+				
+				
+</style>
+<link rel='stylesheet' id='theme-font-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://docs.kali.org/wp-content/themes/knowhow/css/font-awesome.min.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='shortcodes-css'  href='https://docs.kali.org/wp-content/themes/knowhow/framework/shortcodes/shortcodes.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='codecolorer-css'  href='https://docs.kali.org/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.11' type='text/css' media='screen' />
+<link rel='stylesheet' id='mediaelementjs-styles-css'  href='https://docs.kali.org/wp-content/plugins/media-element-html5-video-and-audio-player/mediaelement/mediaelementplayer.css?ver=4.8.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://docs.kali.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://docs.kali.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://docs.kali.org/wp-content/plugins/media-element-html5-video-and-audio-player/mediaelement/mediaelement-and-player.min.js?ver=2.1.3'></script>
+<link rel='https://api.w.org/' href='https://docs.kali.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://docs.kali.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://docs.kali.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.1" />
+<script type="text/javascript">var icl_lang = 'en';var icl_home = 'https://docs.kali.org/';</script>
+<script type="text/javascript" src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js"></script>
+<meta name="generator" content="WPML ver:2.9.1 stt:1,61,39,4,3,27,28,47,2,5,20,25,44,55;0" />
+<link rel="alternate" hreflang="fr-FR" href="https://docs.kali.org/category/introduction-fr" />
+<!--[if lt IE 9]><script src="https://docs.kali.org/wp-content/themes/knowhow/js/html5.js"></script><![endif]--><!--[if (gte IE 6)&(lte IE 8)]><script src="https://docs.kali.org/wp-content/themes/knowhow/js/selectivizr-min.js"></script><![endif]--><meta data-pso-pv="1.2.1" data-pso-pt="category" data-pso-th="4a8c140c4eb7be5fe850ca39b946669c"></head>
+<body class="archive category category-introduction category-167">
+
+<!-- #site-container -->
+<div id="site-container" class="clearfix">
+
+<!-- #primary-nav-mobile -->
+<nav id="primary-nav-mobile">
+<a class="menu-toggle clearfix" href="#"><i class="fa fa-reorder"></i></a>
+<ul id="mobile-menu" class="clearfix"><li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-148"><a href="http://docs.kali.org">Home</a></li>
+<li id="menu-item-5782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5782"><a href="/faq">F.A.Q</a></li>
+<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="https://docs.kali.org/contribute">Contribute to Kali</a></li>
+<li id="menu-item-5152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5152"><a href="http://tools.kali.org">Kali Tools</a></li>
+<li id="menu-item-268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268"><a href="https://forums.kali.org/">Kali Forums</a></li>
+</ul></nav>
+<!-- /#primary-nav-mobile -->
+
+<!-- #header -->
+<header id="site-header" class="clearfix" role="banner">
+<div class="container">
+
+<!-- #logo -->
+  <div id="logo">
+    <a title="Kali Linux" href="https://docs.kali.org">
+      <img alt="Kali Linux" src="//docs.kali.org/wp-content/uploads/2015/02/dragon-logo1.png">
+    </a>
+    <h1>
+      <a title="Kali Linux" href="https://docs.kali.org">
+        Kali Linux      </a>
+    </h1>
+    <h2>
+      <a title="Kali Linux" href="https://docs.kali.org">
+        Official Documentation      </a>
+    </h2>
+  </div>
+<!-- /#logo -->
+<!-- #primary-nav -->
+<nav id="primary-nav" role="navigation" class="clearfix">
+      <ul id="menu-docs" class="nav sf-menu clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-148"><a href="http://docs.kali.org">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5782"><a href="/faq">F.A.Q</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="https://docs.kali.org/contribute">Contribute to Kali</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5152"><a href="http://tools.kali.org">Kali Tools</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268"><a href="https://forums.kali.org/">Kali Forums</a></li>
+</ul>    </nav>
+<!-- #primary-nav -->
+
+</div>
+</header>
+<!-- /#header -->
+
+<!-- #live-search -->
+    <div id="live-search">
+    <div class="container">
+    <div id="search-wrap">
+      <form role="search" method="get" id="searchform" class="clearfix" action="https://docs.kali.org/">
+        <input type="text" onfocus="if (this.value == 'Have a question? Type your keywords here!') {this.value = '';}" onblur="if (this.value == '')  {this.value = 'Have a question? Type your keywords here!';}" value="Have a question? Type your keywords here!" name="s" id="s" autocapitalize="off" autocorrect="off" autocomplete="off" />
+        <i class="live-search-loading fa fa-spinner fa-spin"></i>
+        <button type="submit" id="searchsubmit">
+                <i class='fa fa-search'></i><span>Search</span>
+            </button>
+      </form>
+      </div>
+    </div>
+    </div>
+<!-- /#live-search -->
+<!-- #primary -->
+<div id="primary" class="clearfix sidebar-left"> 
+<!-- .container -->
+<div class="container">
+
+<!-- #content -->
+<section id="content" role="main">
+
+
+<!-- #page-header -->
+<header id="page-header">
+  <h1 class="page-title">Category: <span>01. Getting Started</span></h1>
+  	<div id="breadcrumbs"><a href="https://docs.kali.org"><icon class="fa fa-home"></i></a><span class="sep">/</span><a href="https://docs.kali.org/category/introduction">01. Getting Started</a> <span class="sep">/</span> </div></header>
+<!-- /#page-header --> 
+
+<!-- #sub-cats -->
+<!-- #/sub-cats --> 
+
+
+
+
+<article id="post-256" class="clearfix post-256 post type-post status-publish format-standard hentry category-introduction">
+
+
+<h2 class="entry-title">
+<a rel="bookmark" href="https://docs.kali.org/introduction/what-is-kali-linux">What is Kali Linux ?</a>
+</h2>
+    
+<div class="entry-content">
+<p><img src="http://docs.kali.org/wp-content/uploads/2013/01/kali-what-150x150.jpg"  class="alignright" /></p>
+<p style="text-align: justify;"><a href="http://www.kali.org" title="Kali Linux" target="_blank">Kali Linux</a> is the new generation of the industry-leading BackTrack Linux penetration testing and security auditing Linux distribution. Kali Linux is a complete re-build of BackTrack from the ground up, adhering completely to <a href="http://www.debian.org/" title="Debian" target="_blank">Debian</a> development standards.</p>
+</div>
+
+<a href="https://docs.kali.org/introduction/what-is-kali-linux" class="readmore" title="What is Kali Linux ?" rel="nofollow">Read More<span> &rarr;</span></a>
+
+</article>
+
+<article id="post-1048" class="clearfix post-1048 post type-post status-publish format-standard hentry category-introduction">
+
+
+<h2 class="entry-title">
+<a rel="bookmark" href="https://docs.kali.org/introduction/should-i-use-kali-linux">Should I Use Kali Linux?</a>
+</h2>
+    
+<div class="entry-content">
+<p><img src="http://docs.kali.org/wp-content/uploads/2013/02/kali-should-150x150.jpg"  class="alignright"/></p>
+<p style="text-align: justify;">As the distribution developers, one would likely expect us to recommend that everyone use Kali Linux but the fact of the matter is, that Kali is a Linux distribution specifically geared towards professional penetration testing and security auditing.</p>
+</div>
+
+<a href="https://docs.kali.org/introduction/should-i-use-kali-linux" class="readmore" title="Should I Use Kali Linux?" rel="nofollow">Read More<span> &rarr;</span></a>
+
+</article>
+
+<article id="post-101" class="clearfix post-101 post type-post status-publish format-standard hentry category-introduction">
+
+
+<h2 class="entry-title">
+<a rel="bookmark" href="https://docs.kali.org/introduction/download-official-kali-linux-images">Downloading Kali Linux</a>
+</h2>
+    
+<div class="entry-content">
+<p><img src="http://docs.kali.org/wp-content/uploads/2013/02/kali-100percent-150x150.png"  class="alignright" alt="Kali" /></p>
+<p style="text-align: justify;"><strong>Alert!</strong> Always make certain you are downloading Kali Linux from official sources, as well as verifying sha256sums against official values. It would be easy for a malicious entity to modify a Kali install to contain malicious code, and host it unofficially.</p>
+</div>
+
+<a href="https://docs.kali.org/introduction/download-official-kali-linux-images" class="readmore" title="Downloading Kali Linux" rel="nofollow">Read More<span> &rarr;</span></a>
+
+</article>
+
+<article id="post-499" class="clearfix post-499 post type-post status-publish format-standard hentry category-introduction">
+
+
+<h2 class="entry-title">
+<a rel="bookmark" href="https://docs.kali.org/introduction/kali-linux-default-passwords">Kali Linux Default Passwords</a>
+</h2>
+    
+<div class="entry-content">
+<p><img src="http://docs.kali.org/wp-content/uploads/2013/02/kali-pass-150x150.jpg"  class="alignright" /></p>
+<p style="text-align: justify;">During installation, Kali Linux allows users to configure a password for the <em>root</em> user. However, should you decide to boot the live image instead, the i386, amd64, and ARM images are configured with the <strong>default root password &#8211; &#8220;<span style="color: #ff0000;">toor</span>&#8220;</strong>, without the quotes.</p>
+</div>
+
+<a href="https://docs.kali.org/introduction/kali-linux-default-passwords" class="readmore" title="Kali Linux Default Passwords" rel="nofollow">Read More<span> &rarr;</span></a>
+
+</article>
+
+  
+
+</section>
+<!-- /#content -->
+
+<!-- #sidebar -->
+<aside id="sidebar" role="complementary">
+<div id="text-5" class="widget widget_text clearfix"><h4 class="widget-title"><span>Ready for OSCP ?</span></h4>			<div class="textwidget"><a href="https://www.offensive-security.com/information-security-training/penetration-testing-with-kali-linux/"><img src="//docs.kali.org/wp-content/uploads/2015/03/oscp-certs.png" alt="oscp-certs" width="500" height="326" class="aligncenter size-full wp-image-5872" /></a>
+
+<br />
+<p style="text-align: justify;">Join the ever growing group of highly skilled <strong>Offensive Security Certified Professionals</strong>. Learn hands-on, <a href="https://www.offensive-security.com/information-security-training/penetration-testing-with-kali-linux/">real world <strong>penetration testing</strong> </a>from the makers of Kali Linux.</p></div>
+		</div><div id="categories-2" class="widget widget_categories clearfix"><h4 class="widget-title"><span>Docs Categories</span></h4>		<ul>
+	<li class="cat-item cat-item-167 current-cat"><a href="https://docs.kali.org/category/introduction" >01. Getting Started</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://docs.kali.org/category/downloading" >02. Kali Linux Live</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://docs.kali.org/category/installation" >03. Installing Kali Linux</a>
+</li>
+	<li class="cat-item cat-item-170"><a href="https://docs.kali.org/category/kali-on-arm" >04. Kali Linux on ARM</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://docs.kali.org/category/general-use" >05. Using Kali Linux</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://docs.kali.org/category/development" >06. Customizing Kali Linux</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://docs.kali.org/category/community" >07. Kali Community Support</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://docs.kali.org/category/policy" >08. Kali Linux Policies</a>
+</li>
+	<li class="cat-item cat-item-166"><a href="https://docs.kali.org/category/kali-dojo" >09. The Kali Linux Dojo</a>
+</li>
+		</ul>
+</div><div id="text-4" class="widget widget_text clearfix"><h4 class="widget-title"><span>Follow our Projects</span></h4>			<div class="textwidget"><script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<a href="//twitter.com/offsectraining" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#ffa24f" data-show-count="true">Follow @offsectraining</a>
+
+<a href="https://twitter.com/kalilinux" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#ffa24f" data-show-count="true">Follow @kalilinux</a>
+
+<a href="https://twitter.com/exploitdb" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#ffa24f" data-show-count="true">Follow @exploitdb</a>
+</div>
+		</div><!-- #sidebar -->
+</aside>
+
+</div>
+<!-- .container --> 
+
+</div>
+<!-- /#primary -->
+
+<!-- #footer-widgets -->
+<!-- /#footer-widgets -->
+
+<!-- #site-footer -->
+<footer id="site-footer" class="clearfix" role="contentinfo">
+<div class="container">
+
+  
+
+  <small id="copyright">
+    Copyright © 2017 Offensive Security. All rights reserved.    </small>
+  
+</div>
+</footer> 
+<!-- /#site-footer -->
+
+<!-- /#site-container -->
+</div>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+	jQuery('#live-search #s').liveSearch({url: 'https://docs.kali.org/index.php?ajax=1&s='});
+	});
+	</script>
+
+                <div id="lang_sel_footer">
+                    <ul>
+                        <li><a rel="alternate" hreflang="en" href="https://docs.kali.org/category/introduction" class="lang_sel_sel"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="English" class="iclflag" title="English"  />&nbsp;English</a></li>
+                        <li><a rel="alternate" hreflang="zh-hans" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/zh-hans.png" alt="简体中文" class="iclflag" title="简体中文"  />&nbsp;简体中文</a></li>
+                        <li><a rel="alternate" hreflang="fr" href="https://docs.kali.org/category/introduction-fr"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/fr.png" alt="Français" class="iclflag" title="Français"  />&nbsp;Français</a></li>
+                        <li><a rel="alternate" hreflang="de" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.png" alt="Deutsch" class="iclflag" title="Deutsch"  />&nbsp;Deutsch</a></li>
+                        <li><a rel="alternate" hreflang="ar" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/ar.png" alt="العربية" class="iclflag" title="العربية"  />&nbsp;العربية</a></li>
+                        <li><a rel="alternate" hreflang="pt-br" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.png" alt="Português" class="iclflag" title="Português"  />&nbsp;Português</a></li>
+                        <li><a rel="alternate" hreflang="nl" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/nl.png" alt="Nederlands" class="iclflag" title="Nederlands"  />&nbsp;Nederlands</a></li>
+                        <li><a rel="alternate" hreflang="it" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/it.png" alt="Italiano" class="iclflag" title="Italiano"  />&nbsp;Italiano</a></li>
+                        <li><a rel="alternate" hreflang="ja" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/ja.png" alt="日本語" class="iclflag" title="日本語"  />&nbsp;日本語</a></li>
+                        <li><a rel="alternate" hreflang="ru" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.png" alt="Русский" class="iclflag" title="Русский"  />&nbsp;Русский</a></li>
+                        <li><a rel="alternate" hreflang="es" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.png" alt="Español" class="iclflag" title="Español"  />&nbsp;Español</a></li>
+                        <li><a rel="alternate" hreflang="he" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/he.png" alt="עברית" class="iclflag" title="עברית"  />&nbsp;עברית</a></li>
+                        <li><a rel="alternate" hreflang="id" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/id.png" alt="Indonesia" class="iclflag" title="Indonesia"  />&nbsp;Indonesia</a></li>
+                        <li><a rel="alternate" hreflang="tr" href="https://docs.kali.org/"><img src="https://docs.kali.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/tr.png" alt="Türkçe" class="iclflag" title="Türkçe"  />&nbsp;Türkçe</a></li>
+                    </ul>
+                </div><script type='text/javascript' src='https://docs.kali.org/wp-content/themes/knowhow/js/functions.js?ver=4.8.1'></script>
+<script type='text/javascript' src='https://docs.kali.org/wp-content/themes/knowhow/framework/shortcodes/shortcodes.js?ver=4.8.1'></script>
+<script type='text/javascript' src='https://docs.kali.org/wp-includes/js/wp-embed.min.js?ver=4.8.1'></script>
+<script type='text/javascript' src='https://docs.kali.org/wp-content/themes/knowhow/js/jquery.livesearch.js?ver=4.8.1'></script>
+</body>
+</html>
